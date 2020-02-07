@@ -8,10 +8,10 @@ from datetime import timedelta
 df = pd.read_csv('https://tirinox.ru/wp-content/uploads/2020/01/corona.csv', parse_dates=['day'])
 
 print(df.head())
-'''
+
 df.plot(kind='bar', x='day', y=['infected', 'dead'])
 plt.show()
-'''
+
 
 def fit_func_exp(x, a, b, c):
     '''Selected function'''
@@ -46,4 +46,3 @@ doom_day = x_days[doom_index]
 day0 = df['day'][0]
 doom_date = day0 + timedelta(days=int(doom_day))
 print(f'Doom date: {doom_date:%d.%m.%Y}')
-
