@@ -4,8 +4,9 @@ import numpy as np
 from scipy.optimize import curve_fit
 from datetime import timedelta
 
+adres = 'https://tirinox.ru/wp-content/uploads/2020/01/corona.csv'
 
-df = pd.read_csv('https://tirinox.ru/wp-content/uploads/2020/01/corona.csv', parse_dates=['day'])
+df = pd.read_csv(adres, parse_dates=['day'])
 
 print(df.head())
 
